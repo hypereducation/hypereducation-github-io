@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import ImpactBar from "@/components/ImpactBar";
 import ProgramCard from "@/components/ProgramCard";
@@ -27,14 +27,14 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.7,
-      ease: "easeOut" as const
+      ease: [0.22, 1, 0.36, 1]
     }
   },
 };
