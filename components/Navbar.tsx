@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -37,21 +38,14 @@ export default function Navbar() {
             className="flex items-center gap-2.5 group"
             aria-label="HyperEducation home"
           >
-            <div
-              className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#E8890C] transition-colors duration-300 ${
-                scrolled ? "bg-[#0D4F47]" : "bg-white/20"
-              }`}
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                <path
-                  d="M3 9L9 3L15 9L9 15L3 9Z"
-                  fill={scrolled ? "#FAF6EF" : "white"}
-                />
-                <path
-                  d="M6 9L9 6L12 9L9 12L6 9Z"
-                  fill={scrolled ? "#0D4F47" : "rgba(255,255,255,0.3)"}
-                />
-              </svg>
+            <div className="w-8 h-8 flex-shrink-0">
+              <Image
+                src="/icon.png"
+                alt="HyperEducation logo"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain"
+              />
             </div>
             <span
               className={`font-serif text-xl font-normal tracking-tight transition-colors duration-300 ${
