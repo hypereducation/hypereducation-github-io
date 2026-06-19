@@ -24,10 +24,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#FAF6EF]/90 backdrop-blur-md shadow-sm border-b border-stone-200/60"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#0D4F47] ${
+        scrolled ? "shadow-md" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -48,9 +46,7 @@ export default function Navbar() {
               />
             </div>
             <span
-              className={`font-serif text-xl font-normal tracking-tight transition-colors duration-300 ${
-                scrolled ? "text-[#0D4F47]" : "text-white"
-              }`}
+              className="font-serif text-xl font-normal tracking-tight text-white"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
               HyperEducation
@@ -63,38 +59,38 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                  scrolled
-                    ? "text-stone-700 hover:text-[#0D4F47] hover:bg-[#0D4F47]/6"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
-                }`}
+                className="px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-white/90 hover:text-white hover:bg-white/10"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          {/* CTA + mobile toggle */}
+          {/* CTA + auth + mobile toggle */}
           <div className="flex items-center gap-3">
+            <Link
+              href="/login"
+              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 text-white/90 hover:text-white hover:bg-white/10"
+            >
+              Sign in
+            </Link>
+            <Link
+              href="/register"
+              className="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full active:scale-95 transition-all duration-200 bg-white/15 text-white hover:bg-white/25 border border-white/30"
+            >
+              Register
+            </Link>
             <Link
               href="/apply"
               id="nav-apply-cta"
-              className={`hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full active:scale-95 transition-all duration-200 ${
-                scrolled
-                  ? "bg-[#0D4F47] text-[#FAF6EF] hover:bg-[#136058] shadow-sm"
-                  : "bg-[#E8890C] text-white hover:bg-[#edA030]"
-              }`}
+              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-full active:scale-95 transition-all duration-200 bg-[#E8890C] text-white hover:bg-[#edA030]"
             >
               Apply now
             </Link>
 
             {/* Mobile hamburger */}
             <button
-              className={`md:hidden p-2 rounded-lg transition-colors ${
-                scrolled
-                  ? "text-stone-700 hover:bg-stone-100"
-                  : "text-white hover:bg-white/10"
-              }`}
+              className="md:hidden p-2 rounded-lg transition-colors text-white hover:bg-white/10"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
@@ -140,9 +136,23 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
+                href="/login"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 text-sm font-medium text-stone-700 hover:text-[#0D4F47] hover:bg-[#0D4F47]/6 rounded-lg transition-colors"
+              >
+                Sign in
+              </Link>
+              <Link
+                href="/register"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl text-center hover:bg-green-700 transition-colors"
+              >
+                Register
+              </Link>
+              <Link
                 href="/apply"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 px-4 py-3 bg-[#0D4F47] text-[#FAF6EF] text-sm font-semibold rounded-xl text-center"
+                className="mt-1 px-4 py-3 bg-[#0D4F47] text-[#FAF6EF] text-sm font-semibold rounded-xl text-center"
               >
                 Apply now
               </Link>

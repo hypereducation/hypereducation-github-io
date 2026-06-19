@@ -52,18 +52,10 @@ export default function DonatePage() {
               id="status-heading"
               className="font-bold text-base mb-2"
             >
-              Donations are not currently being accepted
+              Donations are currently closed
             </h2>
-            <p className="leading-relaxed mb-2">
-              HyperEducation has not yet completed charity registration in
-              England and Wales. Until that registration is in place we are
-              not soliciting donations, cannot issue tax receipts, and have
-              no payment processor connected.
-            </p>
             <p className="leading-relaxed">
-              If you would like to be notified when giving opens, please use
-              the interest form below. We will not contact you for any other
-              purpose.
+              Sign up below to be notified when giving opens.
             </p>
           </div>
         </div>

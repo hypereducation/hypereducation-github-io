@@ -1,0 +1,54 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { cookies } from 'next/headers'
+import { registrationSchema } from '@/lib/validations/auth'
+import { createClient } from '@/utils/supabase/server'
+
+export async function POST(request: NextRequest) {
+  let body: unknown
+
+  try {
+    body = await request.json()
+  } catch {
+    return NextResponse.json({ message: 'Invalid request body.' }, { status: 400 })
+  }
+
+  const result = registrationSchema.safeParse(body)
+
+  if (!result.success) {
+    const firstError = result.error.issues[0]
+    return NextResponse.json(
+      { message: firstError?.message ?? 'Validation failed.' },
+      { status: 400 },
+    )
+  }
+
+  const { email, password, fullName } = result.data
+  const cookieStore = await cookies()
+  const supabase = createClient(cookieStore)
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      data: { full_name: fullName },
+    },
+  })
+
+  if (error) {
+    if (error.code === 'user_already_exists' || error.status === 422) {
+      return NextResponse.json(
+        { message: 'An account with this email already exists.' },
+        { status: 409 },
+      )
+    }
+    return NextResponse.json({ message: error.message }, { status: 500 })
+  }
+
+  return NextResponse.json(
+    {
+      message: 'Registration successful. Please check your email to confirm your account.',
+      userId: data.user?.id,
+    },
+    { status: 201 },
+  )
+}
