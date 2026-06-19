@@ -24,24 +24,3 @@ All programmes are delivered at no cost to the learner.
 ## Status
 
 HyperEducation is in early development. We are not yet a registered charity and are not currently accepting donations. Charity registration with the Charity Commission for England and Wales is in progress — we will publish our charity number, registered address, and trustees once registration is complete.
-
-## This repository
-
-This is the public website for HyperEducation, built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com), deployed on [Vercel](https://vercel.com).
-
-### Running locally
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Connect
-
-- Website: [hypereducation.org](https://hypereducation.org)
-- LinkedIn: [linkedin.com/company/hyper-education](https://www.linkedin.com/company/hyper-education/)
-- Instagram: [@hypereducationx](https://instagram.com/hypereducationx)
-- X: [@hyper_education](https://x.com/hyper_education)
-- Email: hello@hypereducation.org
