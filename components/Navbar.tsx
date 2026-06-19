@@ -74,8 +74,28 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA + mobile toggle */}
+          {/* CTA + auth + mobile toggle */}
           <div className="flex items-center gap-3">
+            <Link
+              href="/login"
+              className={`hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                scrolled
+                  ? "text-stone-700 hover:text-[#0D4F47] hover:bg-[#0D4F47]/6"
+                  : "text-white/90 hover:text-white hover:bg-white/10"
+              }`}
+            >
+              Sign in
+            </Link>
+            <Link
+              href="/register"
+              className={`hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full active:scale-95 transition-all duration-200 ${
+                scrolled
+                  ? "bg-green-600 text-white hover:bg-green-700 shadow-sm"
+                  : "bg-white/15 text-white hover:bg-white/25 border border-white/30"
+              }`}
+            >
+              Register
+            </Link>
             <Link
               href="/apply"
               id="nav-apply-cta"
@@ -140,9 +160,23 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
+                href="/login"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 text-sm font-medium text-stone-700 hover:text-[#0D4F47] hover:bg-[#0D4F47]/6 rounded-lg transition-colors"
+              >
+                Sign in
+              </Link>
+              <Link
+                href="/register"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 bg-green-600 text-white text-sm font-semibold rounded-xl text-center hover:bg-green-700 transition-colors"
+              >
+                Register
+              </Link>
+              <Link
                 href="/apply"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 px-4 py-3 bg-[#0D4F47] text-[#FAF6EF] text-sm font-semibold rounded-xl text-center"
+                className="mt-1 px-4 py-3 bg-[#0D4F47] text-[#FAF6EF] text-sm font-semibold rounded-xl text-center"
               >
                 Apply now
               </Link>

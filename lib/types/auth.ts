@@ -1,12 +1,12 @@
-import type { AuthUser } from '@supabase/supabase-js'
+import type { User } from '@supabase/supabase-js'
 
-export type { AuthUser }
+export type { User as AuthUser }
 
 export type RegistrationFormData = {
+  fullName: string
   email: string
   password: string
   confirmPassword: string
-  fullName: string
 }
 
 export type AuthError = {

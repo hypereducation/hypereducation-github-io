@@ -14,8 +14,9 @@ export async function POST(request: NextRequest) {
   const result = registrationSchema.safeParse(body)
 
   if (!result.success) {
+    const firstError = result.error.issues[0]
     return NextResponse.json(
-      { message: 'Validation failed.', errors: result.error.flatten().fieldErrors },
+      { message: firstError?.message ?? 'Validation failed.' },
       { status: 400 },
     )
   }
@@ -38,15 +39,14 @@ export async function POST(request: NextRequest) {
         { status: 409 },
       )
     }
-
-    return NextResponse.json(
-      { message: error.message },
-      { status: 500 },
-    )
+    return NextResponse.json({ message: error.message }, { status: 500 })
   }
 
   return NextResponse.json(
-    { message: 'Registration successful. Please check your email to confirm your account.', userId: data.user?.id },
-    { status: 200 },
+    {
+      message: 'Registration successful. Please check your email to confirm your account.',
+      userId: data.user?.id,
+    },
+    { status: 201 },
   )
 }

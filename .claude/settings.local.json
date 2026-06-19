@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(find:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(xargs wc -l)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('version','unknown'\\)\\)\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\fahad\\\\Development\\\\HyperEducation\\\\hypereducation-github-io\\\\.claude\\\\worktrees\\\\agent-a894f1921f9724f62\\\\lib\\\\types\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\fahad\\\\Development\\\\HyperEducation\\\\hypereducation-github-io\\\\.claude\\\\worktrees\\\\agent-a894f1921f9724f62\\\\lib\\\\validations\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\fahad\\\\Development\\\\HyperEducation\\\\hypereducation-github-io\\\\.claude\\\\worktrees\\\\agent-a894f1921f9724f62\\\\lib\\\\supabase\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\fahad\\\\Development\\\\HyperEducation\\\\hypereducation-github-io\\\\.claude\\\\worktrees\\\\agent-a894f1921f9724f62\\\\app\\\\api\\\\auth\\\\register\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\fahad\\\\Development\\\\HyperEducation\\\\hypereducation-github-io\\\\.claude\\\\worktrees\\\\agent-a894f1921f9724f62\\\\app\\\\register\")"
     ]
   }
 }
