@@ -80,47 +80,41 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founding story */}
+      {/* Why we exist */}
       <section className="bg-white border-y border-stone-200 py-20" aria-labelledby="founding-heading">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <p className="text-xs font-bold tracking-widest uppercase text-[#E8890C] mb-4">
-            Founding story
+            Why we exist
           </p>
           <h2
             id="founding-heading"
             className="text-4xl text-[#0D4F47] mb-8"
             style={{ fontFamily: "var(--font-dm-serif)" }}
           >
-            It started with a rejected CV.
+            The data skills gap is a fairness gap.
           </h2>
           <div className="space-y-4 text-stone-700 leading-relaxed">
             <p>
-              In 2020, Sarah Okonkwo was a senior data engineer at a large consultancy when her
-              friend Marcus — a warehouse supervisor with a sharp analytical mind and genuine
-              curiosity about data — applied for an entry-level data analyst role.
+              Entry-level data analyst roles increasingly require certifications, portfolio
+              projects, and experience with tools like Microsoft Fabric and Power BI —
+              prerequisites that are difficult to acquire without an existing professional
+              network or the means to pay for paid training.
             </p>
             <p>
-              Marcus was rejected before interview. The job posting required a degree he didn't
-              have and "two years of Power BI experience" he hadn't had the opportunity to
-              acquire. Sarah offered to train him herself. Six months later, Marcus landed a
-              Data Analyst role at a local NHS trust.
+              For talented people from underprivileged backgrounds — those without a
+              university degree, recent immigrants, care leavers, and the long-term
+              unemployed — that gap can feel impossible to cross alone.
             </p>
             <p>
-              Sarah and her colleague James Hartley spent the next year turning that
-              self-designed curriculum into something scalable. HyperEducation was registered as
-              a charity in January 2021 and ran its first cohort of eight students the
-              following March.
-            </p>
-            <p>
-              Today, we've graduated over 847 students, partnered with dozens of employers,
-              and expanded to three structured tracks covering the full Microsoft Fabric
-              ecosystem. Marcus now mentors our Data Career Launchpad cohorts.
+              HyperEducation is being built to bridge that gap: structured technical
+              training, mentorship, and career support, delivered at zero cost to learners
+              who would otherwise be locked out of the data profession.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Registration */}
+      {/* Status */}
       <section
         id="faq"
         className="bg-[#0D4F47] py-16"
@@ -132,16 +126,15 @@ export default function AboutPage() {
             className="text-3xl text-[#FAF6EF] mb-4"
             style={{ fontFamily: "var(--font-dm-serif)" }}
           >
-            Registered non-profit
+            Building in public
           </h2>
-          <p className="text-white/65 leading-relaxed mb-4">
-            HyperEducation is a registered charity in England and Wales.
+          <p className="text-white/65 leading-relaxed mb-4 max-w-2xl mx-auto">
+            HyperEducation is a non-profit startup founded in Pakistan, on a mission
+            to help communities across the world access the data skills and careers
+            they deserve. We are building in public — not yet a registered charity,
+            and not currently accepting donations. We will publish our registration
+            details and trustees here once that process is complete.
           </p>
-          <div className="inline-flex flex-col sm:flex-row gap-4 items-center text-sm text-white/50">
-            <span>Charity No. 1234567</span>
-            <span className="hidden sm:block">·</span>
-            <span>Registered address: 12 Innovation Square, London, EC2A 4NE</span>
-          </div>
         </div>
       </section>
     </>

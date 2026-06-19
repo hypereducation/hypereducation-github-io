@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { stories } from "@/lib/stories";
 
 export const metadata: Metadata = {
-  title: "Graduate Stories",
+  title: "Student Stories",
   description:
-    "Meet HyperEducation graduates — from warehouses, factories, and care homes to data careers at HSBC, NHS, Tesco, and more.",
+    "Meet the students HyperEducation is built to serve — people from across Pakistan breaking into data careers through free, structured training.",
 };
 
 const trackColor: Record<string, string> = {
@@ -27,20 +27,20 @@ export default function StoriesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-xs font-bold tracking-widest uppercase text-[#E8890C] mb-4">
-              Graduate stories
+              Student stories
             </p>
             <h1
               className="text-5xl lg:text-6xl text-[#FAF6EF] leading-tight mb-6"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Every career
+              Real people.
               <br />
-              has a beginning.
+              Real change.
             </h1>
             <p className="text-white/65 text-lg leading-relaxed">
-              These are the stories of people who decided to change their lives —
-              and did. Read about where they started, what they learned, and
-              where they are now.
+              From Karachi to Peshawar, these are the students HyperEducation
+              is built for — people with the drive and the talent, who just
+              needed a fair shot at a data career.
             </p>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function StoriesPage() {
       </div>
 
       {/* Stories grid */}
-      <section className="bg-[#FAF6EF] py-16 pb-28" aria-label="Graduate stories grid">
+      <section className="bg-[#FAF6EF] py-16 pb-28" aria-label="Student stories grid">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {stories.map((story) => (
@@ -72,7 +72,7 @@ export default function StoriesPage() {
                     </div>
                     <div>
                       <p className="font-bold text-white text-lg leading-none">{story.name}</p>
-                      <p className="text-white/70 text-xs mt-0.5">{story.graduationYear} Graduate</p>
+                      <p className="text-white/70 text-xs mt-0.5">{story.employer}</p>
                     </div>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export default function StoriesPage() {
 
                   {/* Former situation */}
                   <p className="text-xs text-stone-400 mb-1 font-medium uppercase tracking-wide">
-                    Before HyperEducation
+                    Background
                   </p>
                   <p className="text-sm text-stone-600 mb-4">{story.formerSituation}</p>
 
@@ -119,7 +119,7 @@ export default function StoriesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0D4F47] py-20" aria-label="Become a graduate story CTA">
+      <section className="bg-[#0D4F47] py-20" aria-label="Apply CTA">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2
             className="text-4xl text-[#FAF6EF] mb-4"
@@ -128,8 +128,8 @@ export default function StoriesPage() {
             Your story could be next.
           </h2>
           <p className="text-white/65 mb-8">
-            Applications for Cohort 9 are open. Join hundreds of students who
-            have already changed their futures.
+            Applications for our pilot cohort are open. If you see yourself
+            in one of these stories, we want to hear from you.
           </p>
           <a
             href="/apply"

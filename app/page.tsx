@@ -251,7 +251,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Testimonials ─────────────────────────────── */}
+      {/* ── Personas ─────────────────────────────── */}
       <section className="py-20 lg:py-28 bg-[#FAF6EF]" aria-labelledby="testimonials-heading">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -262,27 +262,32 @@ export default function HomePage() {
               transition={{ duration: 0.7 }}
             >
               <p className="text-xs font-bold tracking-widest uppercase text-[#E8890C] mb-3">
-                Graduate voices
+                Who we are built for
               </p>
               <h2
                 id="testimonials-heading"
                 className="text-4xl lg:text-5xl text-[#0D4F47] mb-6 leading-tight"
                 style={{ fontFamily: "var(--font-dm-serif)" }}
               >
-                Real stories.
+                Built for the
                 <br />
-                Real careers.
+                people overlooked.
               </h2>
-              <p className="text-stone-600 leading-relaxed mb-8">
-                Our graduates come from warehouses, factories, and care
-                homes. They leave as data analysts, BI developers, and
-                analytics engineers at organisations that matter.
+              <p className="text-stone-600 leading-relaxed mb-4">
+                Our programmes are designed for learners from warehouses,
+                factories, care leavers, refugees, and the long-term unemployed
+                — anyone with the aptitude and commitment but without the usual
+                on-ramps into a data career.
+              </p>
+              <p className="text-stone-500 text-sm leading-relaxed mb-8 italic">
+                HyperEducation is pre-launch. The profiles shown here are
+                illustrative learner personas, not real graduates.
               </p>
               <Link
                 href="/stories"
                 className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#0D4F47] text-[#0D4F47] font-semibold text-sm rounded-full hover:bg-[#0D4F47] hover:text-white transition-all duration-200"
               >
-                Read all stories
+                Read all personas
               </Link>
             </motion.div>
 

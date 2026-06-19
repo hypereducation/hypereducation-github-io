@@ -91,10 +91,12 @@ export default function TestimonialCarousel({ items }: TestimonialCarouselProps)
 
               <div>
                 <p className="font-bold text-[#0D4F47]">{item.name}</p>
-                <p className="text-sm text-stone-500">
-                  {item.currentRole} at {item.employer}
+                <p className="text-xs uppercase tracking-wide text-stone-400 mt-0.5">
+                  Illustrative learner persona
                 </p>
-                <p className="text-xs text-stone-400 mt-0.5">Formerly: {item.formerSituation}</p>
+                <p className="text-sm text-stone-500 mt-2">{item.currentRole}</p>
+                <p className="text-xs text-stone-400">Target outcome: {item.employer}</p>
+                <p className="text-xs text-stone-400 mt-0.5">Starting point: {item.formerSituation}</p>
               </div>
             </div>
           </motion.div>

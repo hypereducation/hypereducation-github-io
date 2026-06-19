@@ -24,7 +24,7 @@ const footerLinks = {
 
 const socialLinks = [
   {
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/hyper-education/",
     label: "LinkedIn",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -33,7 +33,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://twitter.com",
+    href: "https://x.com/hyper_education",
     label: "X (Twitter)",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -42,7 +42,7 @@ const socialLinks = [
     ),
   },
   {
-    href: "https://instagram.com",
+    href: "https://instagram.com/hypereducationx",
     label: "Instagram",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
